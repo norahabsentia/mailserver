@@ -10,6 +10,7 @@ app.listen(port);
 console.log('Server started!');
 
 app.post('/mail', function(req, res) {
+    console.log(req)
     var user_id = req.param('id');
     var token = req.param('id1');
     var geo = req.param('id2');
