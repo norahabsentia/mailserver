@@ -11,7 +11,7 @@ console.log('Server started!');
 
 app.post('/mail', function(req, res) {
 //     console.log(req)
-    var user_id = req.param('id');
+    var user_id = req.body.id;
     var token = req.param('id1');
     var geo = req.param('id2');
     console.log(user_id);
