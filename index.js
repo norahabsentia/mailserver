@@ -14,7 +14,8 @@ app.post('/mail', function(req, res) {
     var user_id = req.param('id');
     var token = req.param('id1');
     var geo = req.param('id2');
-
+    console.log(user_id);
+    console.log(token);
     var mailgun = require("mailgun-js");
     var api_key = 'key-a0a6f0f537f651a6afb73234d346a045';
     var DOMAIN = 'sandbox54dd8016480441aaa29353d95fdf3890.mailgun.org';
