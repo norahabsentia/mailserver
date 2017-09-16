@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.post('/mail', function(req, res) {
     res.header('Access-Control-Allow-Origin', "*")
     var mail_from = req.body.name + "<" + req.body.email + ">";
-    var mail_to = 'Ashish Gupta <ashish@absentiavr.com>';
+    var mail_to = 'Ashish Gupta <ashish@absentiavr.com>, Akash Paul <iakashpaul@gmail.com>';
     var mail_subject = 'A message from norah.ai';
     var mail_text = "Phone Number: " + req.body.phone + "\n" + req.body.text;
 
