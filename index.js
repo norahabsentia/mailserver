@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.post('/mail', function(req, res) {
     res.header('Access-Control-Allow-Origin', "*")
     var mail_from = req.body.name + "<" + req.body.email + ">";
-    var mail_to = 'ashish@absentiavr.com, iakashpaul@gmail.com';
+    var mail_to = 'ashish@absentiavr.com,iakashpaul@gmail.com';
     var mail_subject = 'A message from norah.ai';
     var mail_text = "Phone Number: " + req.body.phone + "\n" + req.body.text;
 
@@ -28,7 +28,9 @@ app.post('/mail', function(req, res) {
         text: mail_text
     };
 
-    mailgun.messages().send(data, function(error, body) {});
+    mailgun.messages().send(data, function(error, body) {
+        console.log(body);
+    });
     res.send("ok");
 });
 app.listen(process.env.PORT || 3000, function() {
